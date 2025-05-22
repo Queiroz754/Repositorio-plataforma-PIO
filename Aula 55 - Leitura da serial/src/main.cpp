@@ -19,10 +19,10 @@ void loop()
 {
   while (SerialBT.available())
   {
-    char caracter = SerialBT.read();
+    char caracter = Serial.read();
     if (caracter == '\n')
     {
-      SerialBT.println(palavra);
+      Serial.println(palavra);
       if (palavra.equals("liga")) //*equals serve para saber se a string e igual a um apalavra
       {
         digitalWrite(pinLed, HIGH);
@@ -31,11 +31,11 @@ void loop()
       else if (palavra.equals("desliga"))
       {
         digitalWrite(pinLed, LOW);
-        SerialBT.println("LED desligado");
+        Serial.println("LED desligado");
       }
       else
       {
-        SerialBT.println("comando nao reconhecido");
+        Serial.println("comando nao reconhecido");
       }
       palavra = "";
     }

@@ -64,7 +64,7 @@ void loop()
         {
             estadoLed = !estadoLed;
             tempoInicial = tempoAtual;
-        }
+        }   
     }
 
     digitalWrite(pinLed, estadoLed);
